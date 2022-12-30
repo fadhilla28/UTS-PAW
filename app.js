@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-app.listen(8000, function hostname() {
-  console.log("server running on port 8000");
+app.listen(8001, function hostname() {
+  console.log("server running on port 8001");
 });
 
 const Pool = require("pg").Pool;
@@ -34,7 +34,13 @@ app.get("/signUp", function (req, res) {
   res.render("register.ejs");
 });
 app.get("/category", function (req, res) {
-  res.render("categories.ejs");
+  pool.query("select * from product", function (error, result) {
+    if (error) {
+      throw error;
+    }
+    res.render("categories.ejs", { daftarProduct: result.rows });
+  });
+  // res.render("categories.ejs");
 });
 app.get("/cart", function (req, res) {
   pool.query("select*from product", function (error, result) {
@@ -46,6 +52,9 @@ app.get("/cart", function (req, res) {
 });
 app.get("/dashboard", function (req, res) {
   res.render("dashboard.ejs");
+});
+app.get("/admin", function (req, res) {
+  res.render("admin/dashboard.ejs");
 });
 app.get("/details", function (req, res) {
   pool.query("select*from product", function (error, result) {
@@ -64,36 +73,56 @@ app.get("/success", function (req, res) {
 app.get("/dashAcc", function (req, res) {
   res.render("dashboard-account.ejs");
 });
+// app.get("/admin/dashAcc", function (req, res) {
+//   res.render("admin/dashboard-account.ejs");
+// });
 app.get("/dashProductsDet", function (req, res) {
   res.render("dashboard-Products-details.ejs");
 });
-app.get("/dashSett", function (req, res) {
-  res.render("dashboard-settings.ejs");
+app.get("/admin/dashProductsDet", function (req, res) {
+  res.render("admin/dashboard-Products-details.ejs");
+});
+// app.get("/dashSett", function (req, res) {
+//   res.render("dashboard-settings.ejs");
+// });
+app.get("/admin/dashSett", function (req, res) {
+  res.render("admin/dashboard-settings.ejs");
 });
 app.get("/dashTransDet", function (req, res) {
   res.render("dashboard-transactions-details.ejs");
 });
+app.get("/admin/dashTransDet", function (req, res) {
+  res.render("admin/dashboard-transactions-details.ejs");
+});
 app.get("/dashTrans", function (req, res) {
   res.render("dashboard-transactions.ejs");
 });
-app.get("/dashProducts", function (req, res) {
+app.get("/admin/dashTrans", function (req, res) {
+  res.render("admin/dashboard-transactions.ejs");
+});
+// app.get("/dashProducts", function (req, res) {
+//   pool.query("select*from product", function (error, result) {
+//     if (error) {
+//       throw error;
+//     }
+//     res.render("dashboard-Products.ejs", { daftarProduct: result.rows });
+//   });
+// });
+app.get("/admin/dashProducts", function (req, res) {
   pool.query("select*from product", function (error, result) {
     if (error) {
       throw error;
     }
-    res.render("dashboard-Products.ejs", { daftarProduct: result.rows });
+    res.render("admin/dashboard-Products.ejs", { daftarProduct: result.rows });
   });
 });
-app.get("/dashProductsCre", function (req, res) {
-  res.render("dashboard-Products-create.ejs");
+// app.get("/dashProductsCre", function (req, res) {
+//   res.render("dashboard-Products-create.ejs");
+// });
+app.get("/admin/dashProductsCre", function (req, res) {
+  res.render("admin/dashboard-Products-create.ejs");
 });
 app.post("/tambah", function (req, res) {
-  console.log(req.body.storeName);
-  console.log(req.body.storePrice);
-  console.log(req.body.description_1);
-  console.log(req.body.description_2);
-  console.log(req.body.storeOwner);
-
   let data = {
     name: req.body.storeName,
     price: req.body.storePrice,

@@ -24,25 +24,29 @@
             <img src=" /dashboard-store-logo.svg" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
-            <a href="/dashboard" class="list-group-item list-group-item-action"
+            <a href="/admin" class="list-group-item list-group-item-action"
               >Dashboard</a
             >
-            <!-- <a
-              href="/dashProducts"
-              class="list-group-item list-group-item-action"
+            <a
+              href="/admin/dashProducts"
+              class="list-group-item list-group-item-action active"
               >My Products</a
-            > -->
-            <a href="/dashTrans" class="list-group-item list-group-item-action"
+            >
+            <a
+              href="/admin/dashTrans"
+              class="list-group-item list-group-item-action"
               >Transactions</a
             >
-            <!-- <a href="/dashSett" class="list-group-item list-group-item-action"
-              >Store Settings</a
-            > -->
             <a
-              href="/dashAcc"
-              class="list-group-item list-group-item-action active"
-              >My Account</a
+              href="/admin/dashSett"
+              class="list-group-item list-group-item-action"
+              >Store Settings</a
             >
+            <!-- <a
+              href="/admin/dashAcc"
+              class="list-group-item list-group-item-action"
+              >My Account</a
+            > -->
           </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -84,29 +88,29 @@
                     aria-expanded="false"
                   >
                     <img
-                      src=" /icon-user.png"
+                      src=" /icon-testimonial-2.png"
                       alt=""
                       class="rounded-circle mr-2 profile-picture"
                     />
-                    Hi, Angga
+                    Admin
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/">Back to Store</a>
-                    <a class="dropdown-item" href="/dashAcc">Settings</a>
+                    <a class="dropdown-item" href="/admin/dashAcc">Settings</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/">Logout</a>
-                  </div>
+                  </div> -->
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link d-inline-block mt-2" href="/cart">
                     <img src=" /icon-cart-empty.svg" alt="" />
                   </a>
-                </li>
+                </li> -->
               </ul>
               <!-- Mobile Menu -->
               <ul class="navbar-nav d-block d-lg-none mt-3">
                 <li class="nav-item">
-                  <a class="nav-link"> Hi, Angga </a>
+                  <a class="nav-link"> Admin </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link d-inline-block" href="/cart"> Cart </a>
@@ -121,144 +125,111 @@
           >
             <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">My Account</h2>
-                <p class="dashboard-subtitle">Update your current profile</p>
+                <h2 class="dashboard-title">Add New Product</h2>
+                <p class="dashboard-subtitle">Create your own product</p>
               </div>
               <div class="dashboard-content">
-                <div class="row">
-                  <div class="col-12">
-                    <form action="">
+                <form action="/tambah" method="POST">
+                  <div class="row">
+                    <div class="col-12">
                       <div class="card">
                         <div class="card-body">
-                          <div class="row mb-2">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="name"
-                                  aria-describedby="emailHelp"
-                                  name="name"
-                                  value="Angga"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="email"
-                                  aria-describedby="emailHelp"
-                                  name="email"
-                                  value="email@gmail.com"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="addressOne">Address 1</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="addressOne"
-                                  aria-describedby="emailHelp"
-                                  name="addressOne"
-                                  value="Setra Duta Cemara"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="addressTwo">Address 2</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="addressTwo"
-                                  aria-describedby="emailHelp"
-                                  name="addressTwo"
-                                  value="Blok B2 No. 34"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group">
-                                <label for="province">Province</label>
-                                <select
-                                  name="province"
-                                  id="province"
-                                  class="form-control"
-                                >
-                                  <option value="West Java">West Java</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group">
-                                <label for="city">City</label>
-                                <select
-                                  name="city"
-                                  id="city"
-                                  class="form-control"
-                                >
-                                  <option value="Bandung">Bandung</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group">
-                                <label for="postalCode">Postal Code</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="postalCode"
-                                  name="postalCode"
-                                  value="40512"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="country">Country</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="country"
-                                  name="country"
-                                  value="Indonesia"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label for="mobile">Mobile</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="mobile"
-                                  name="mobile"
-                                  value="+628 2020 11111"
-                                />
-                              </div>
-                            </div>
-                          </div>
                           <div class="row">
-                            <div class="col text-right">
-                              <button
-                                type="submit"
-                                class="btn btn-success px-5"
-                              >
-                                Save Now
-                              </button>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="name">Product Name</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  aria-describedby="name"
+                                  name="storeName"
+                                  placeholder="Write Product Name"
+                                />
+                              </div>
                             </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="price">Price</label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  aria-describedby="price"
+                                  name="storePrice"
+                                  placeholder="Write Price"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="owner">Owner</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  aria-describedby="owner"
+                                  name="storeOwner"
+                                  placeholder="Write Owner"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="description">Description 1</label>
+                                <textarea
+                                  type="text"
+                                  class="form-control"
+                                  aria-describedby="description"
+                                  name="description_1"
+                                  cols="30"
+                                  rows="4"
+                                  class="form-control"
+                                ></textarea>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="description">Description 2</label>
+                                <textarea
+                                  type="text"
+                                  class="form-control"
+                                  aria-describedby="description"
+                                  name="description_2"
+                                  cols="30"
+                                  rows="4"
+                                  class="form-control"
+                                ></textarea>
+                              </div>
+                            </div>
+                            <!-- <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="thumbnails">Thumbnails</label>
+                                <input
+                                  type="file"
+                                  multiple
+                                  class="form-control pt-1"
+                                  id="thumbnails"
+                                  aria-describedby="thumbnails"
+                                  name="thumbnails"
+                                />
+                                <small class="text-muted">
+                                  Kamu dapat memilih lebih dari satu file
+                                </small>
+                              </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
-                    </form>
+                      <div class="row mt-2">
+                        <div class="col">
+                          <input
+                            type="submit"
+                            class="btn btn-success btn-block px-5"
+                            value="Save Now"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

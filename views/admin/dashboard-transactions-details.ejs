@@ -24,25 +24,29 @@
             <img src=" /dashboard-store-logo.svg" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
-            <a href="/dashboard" class="list-group-item list-group-item-action"
+            <a href="/admin" class="list-group-item list-group-item-action"
               >Dashboard</a
             >
-            <!-- <a
-              href="/dashProducts"
+            <a
+              href="/admin/dashProducts"
               class="list-group-item list-group-item-action"
               >My Products</a
-            > -->
+            >
             <a
-              href="/dashTrans"
+              href="/admin/dashTrans"
               class="list-group-item list-group-item-action active"
               >Transactions</a
             >
-            <!-- <a href="/dashSett" class="list-group-item list-group-item-action"
+            <a
+              href="/admin/dashSett"
+              class="list-group-item list-group-item-action"
               >Store Settings</a
-            > -->
-            <a href="/dashAcc" class="list-group-item list-group-item-action"
-              >My Account</a
             >
+            <!-- <a
+              href="/admin/dashAcc"
+              class="list-group-item list-group-item-action"
+              >My Account</a
+            > -->
           </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -84,29 +88,29 @@
                     aria-expanded="false"
                   >
                     <img
-                      src=" /icon-user.png"
+                      src=" /icon-testimonial-2.png"
                       alt=""
                       class="rounded-circle mr-2 profile-picture"
                     />
-                    Hi, Angga
+                    Admin
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/">Back to Store</a>
-                    <a class="dropdown-item" href="/dashAcc">Settings</a>
+                    <a class="dropdown-item" href="/admin/dashAcc">Settings</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/">Logout</a>
-                  </div>
+                  </div> -->
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link d-inline-block mt-2" href="/cart">
                     <img src=" /icon-cart-empty.svg" alt="" />
                   </a>
-                </li>
+                </li> -->
               </ul>
               <!-- Mobile Menu -->
               <ul class="navbar-nav d-block d-lg-none mt-3">
                 <li class="nav-item">
-                  <a class="nav-link"> Hi, Angga </a>
+                  <a class="nav-link"> Admin </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link d-inline-block" href="/cart"> Cart </a>
@@ -212,19 +216,25 @@
                                 <div class="row">
                                   <div class="col-md-3">
                                     <div class="product-title">Status</div>
-                                    <!-- <select
+                                    <select
                                       name="status"
                                       id="status"
                                       class="form-control"
                                       v-model="status"
-                                    > -->
-                                    <option value="UNPAID">Unpaid</option>
-                                    <!-- <option value="PENDING">Pending</option>
-                                    <option value="SHIPPING">Shipping</option>
-                                    <option value="SUCCESS">Success</option> -->
-                                    <!-- </select> -->
+                                    >
+                                      <option value="UNPAID">Unpaid</option>
+                                      <option value="PROCESS">Process</option>
+                                      <option value="SUCCESS">Success</option>
+                                    </select>
                                   </div>
-                                  <template v-if="status == 'SHIPPING'">
+                                  <div class="col-12" style="margin-top: 10px">
+                                    <input
+                                      type="submit"
+                                      class="btn btn-success btn-block px-5"
+                                      value="Save Now"
+                                    />
+                                  </div>
+                                  <!-- <template v-if="status == 'SHIPPING'">
                                     <div class="col-md-3">
                                       <div class="product-title">
                                         Input Resi
@@ -245,7 +255,7 @@
                                         Update Resi
                                       </button>
                                     </div>
-                                  </template>
+                                  </template> -->
                                 </div>
                               </div>
                             </div>

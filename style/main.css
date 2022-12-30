@@ -7257,9 +7257,9 @@ a.close.disabled {
   color: #212529;
 }
 
-.carousel {
+/* .carousel {
   position: relative;
-}
+} */
 
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
@@ -7267,7 +7267,7 @@ a.close.disabled {
 }
 
 .carousel-inner {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   overflow: hidden;
 }
@@ -7279,7 +7279,7 @@ a.close.disabled {
 }
 
 .carousel-item {
-  position: relative;
+  /* position: relative; */
   display: none;
   float: left;
   width: 100%;

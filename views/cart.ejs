@@ -18,7 +18,7 @@
   <body>
     <!-- Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-store"
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
       data-aos="fade-down"
       aria-label="Navbar"
     >
@@ -73,9 +73,8 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-inline-block mt-2">
-                <img src=" /icon-cart-filled.svg" alt="" />
-                <div class="cart-badge">3</div>
+              <a class="nav-link d-inline-block mt-2" href="/cart">
+                <img src=" /icon-cart-empty.svg" alt="" />
               </a>
             </li>
           </ul>
@@ -137,7 +136,7 @@
                   <tr>
                     <td style="width: 25%">
                       <img
-                        src=" /product-cart-1.jpg"
+                        src=" /product-details-4.jpg"
                         alt=""
                         class="cart-image"
                       />
@@ -147,14 +146,13 @@
                       <div class="product-subtitle"><%= item.owner %></div>
                     </td>
                     <td style="width: 35%">
-                      <div class="product-title">$ <%= item.price %></div>
-                      <div class="product-subtitle">USD</div>
+                      <div class="product-title">Rp. <%= item.price %></div>
+                      <div class="product-subtitle">Rupiah</div>
                     </td>
                     <td style="width: 20%">
                       <a href="#" class="btn btn-remove-cart"> Remove </a>
                     </td>
                   </tr>
-                  <% }) %>
                 </tbody>
               </table>
             </div>
@@ -256,27 +254,30 @@
             </div>
           </div>
           <div class="row" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-4 col-md-2">
-              <div class="product-title">$ 10</div>
-              <div class="product-subtitle">Country Tax</div>
+            <!-- <div class="col-4 col-md-2">
+              <div class="product-title">Rp. 0</div>
+              <div class="product-subtitle">Tax</div>
             </div>
             <div class="col-4 col-md-3">
-              <div class="product-title">$ 280</div>
+              <div class="product-title">Rp. 0</div>
               <div class="product-subtitle">Product Insurance</div>
             </div>
             <div class="col-4 col-md-2">
-              <div class="product-title">$ 580</div>
-              <div class="product-subtitle">Ship to Jakarta</div>
-            </div>
+              <div class="product-title">Rp. 0</div>
+              <div class="product-subtitle">Shipping</div>
+            </div> -->
             <div class="col-4 col-md-2">
-              <div class="product-title text-success">$ 392,409</div>
+              <div class="product-title text-success">
+                Rp. <%= item.price %>
+              </div>
               <div class="product-subtitle">Total</div>
             </div>
-            <div class="col-8 col-md-3">
+            <div class="col-12">
               <a href="/success" class="btn btn-success mt-4 px-4 btn-block">
                 Checkout Now
               </a>
             </div>
+            <% }) %>
           </div>
         </div>
       </section>

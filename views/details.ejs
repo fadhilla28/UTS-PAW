@@ -18,7 +18,7 @@
   <body>
     <!-- Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-store"
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
       data-aos="fade-down"
       aria-label="Navbar"
     >
@@ -150,15 +150,15 @@
           </div>
         </div>
       </section>
-      <% daftarProduct.forEach((item)=> {%>
+      <% for (let i = 0; i < daftarProduct.length; i++) { %>
       <div class="store-details-container" data-aos="fade-up">
         <section class="store-heading">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
-                <h1><%= item.name %></h1>
-                <div class="owner"><%= item.owner %></div>
-                <div class="price">$<%= item.price %></div>
+                <h1><%= daftarProduct[i].name %></h1>
+                <div class="owner"><%= daftarProduct[i].owner %></div>
+                <div class="price">Rp. <%= daftarProduct[i].price %></div>
               </div>
               <div class="col-lg-2" data-aos="zoom-in">
                 <a
@@ -174,8 +174,8 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-8">
-                <p><%= item.desc1 %></p>
-                <p><%= item.desc2 %></p>
+                <p><%= daftarProduct[i].desc1 %></p>
+                <p><%= daftarProduct[i].desc2 %></p>
               </div>
             </div>
           </div>
@@ -198,9 +198,8 @@
                     />
                     <div class="media-body">
                       <h5 class="mt-2 mb-1">Hazza Risky</h5>
-                      I thought it was not good for living room. I really happy
-                      to decided buy this product last week now feels like
-                      homey.
+                      I really happy to decided buy this product last week now
+                      feels like homey.
                     </div>
                   </li>
                   <li class="media my-4">
@@ -211,9 +210,7 @@
                     />
                     <div class="media-body">
                       <h5 class="mt-2 mb-1">Anna Sukkirata</h5>
-                      Color is great with the minimalist concept. Even I thought
-                      it was made by Cactus industry. I do really satisfied with
-                      this.
+                      I do really satisfied with this.
                     </div>
                   </li>
                   <li class="media">
@@ -235,7 +232,7 @@
           </div>
         </section>
       </div>
-      <% }); %>
+      <% }; %>
     </div>
 
     <footer>

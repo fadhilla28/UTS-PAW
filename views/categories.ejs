@@ -18,8 +18,9 @@
   <body>
     <!-- Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-store"
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
       data-aos="fade-down"
+      aria-label="Navbar"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
@@ -41,18 +42,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/">Home </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/category">Categories</a>
             </li>
-
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="/signUp">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-success nav-link px-4 text-white" href="/log"
-                >Sign In</a
-              >
-            </li> -->
           </ul>
 
           <!-- Desktop Menu -->
@@ -81,9 +73,8 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-inline-block mt-2">
-                <img src=" /icon-cart-filled.svg" alt="" />
-                <div class="cart-badge">3</div>
+              <a class="nav-link d-inline-block mt-2" href="/cart">
+                <img src=" /icon-cart-empty.svg" alt="" />
               </a>
             </li>
           </ul>
@@ -107,7 +98,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12" data-aos="fade-up">
-              <h5>All Categories</h5>
+              <h5>Categories</h5>
             </div>
           </div>
           <div class="row">
@@ -116,15 +107,15 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-gadgets.svg"
+                    src="/categories-gadgets.svg"
                     alt="Gadgets Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Gadgets</p>
+                <p class="categories-text">Paket</p>
               </a>
             </div>
             <div
@@ -132,15 +123,15 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-furniture.svg"
+                    src="/categories-furniture.svg"
                     alt="Furniture Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Furniture</p>
+                <p class="categories-text">Kebutuhan Rumah Tangga</p>
               </a>
             </div>
             <div
@@ -148,15 +139,15 @@
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-makeup.svg"
+                    src="/categories-makeup.svg"
                     alt="Makeup Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Makeup</p>
+                <p class="categories-text">Kebutuhan Wanita</p>
               </a>
             </div>
             <div
@@ -164,15 +155,15 @@
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-sneaker.svg"
+                    src="/categories-sneaker.svg"
                     alt="Sneaker Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Sneaker</p>
+                <p class="categories-text">Kebutuhan Pria</p>
               </a>
             </div>
             <div
@@ -180,15 +171,15 @@
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-tools.svg"
+                    src="/categories-tools.svg"
                     alt="Tools Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Tools</p>
+                <p class="categories-text">Lampu</p>
               </a>
             </div>
             <div
@@ -196,15 +187,15 @@
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <a class="component-categories d-block" href="#">
+              <a class="component-categories d-block" href="/">
                 <div class="categories-image">
                   <img
-                    src=" /categories-baby.svg"
+                    src="/categories-baby.svg"
                     alt="Baby Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Baby</p>
+                <p class="categories-text">Kebutuhan Bayi</p>
               </a>
             </div>
           </div>
@@ -214,44 +205,12 @@
         <div class="container">
           <div class="row">
             <div class="col-12" data-aos="fade-up">
-              <h5>All Products</h5>
+              <h5>Products</h5>
             </div>
           </div>
+
           <div class="row">
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="background-image: url(' /products-apple-watch.jpg')"
-                  ></div>
-                </div>
-                <div class="products-text">Apple Watch 4</div>
-                <div class="products-price">$890</div>
-              </a>
-            </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="
-                      background-image: url(' /products-orange-bogotta.jpg');
-                    "
-                  ></div>
-                </div>
-                <div class="products-text">Orange Bogotta</div>
-                <div class="products-price">$94,509</div>
-              </a>
-            </div>
+            <% for (let i = 0; i < daftarProduct.length; i++) { %>
             <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
@@ -261,101 +220,17 @@
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
-                    style="
-                      background-image: url(' /products-sofa-ternyaman.jpg');
-                    "
+                    style="background-image: url('/product-details-4.jpg')"
                   ></div>
                 </div>
-                <div class="products-text">Sofa Ternyaman</div>
-                <div class="products-price">$1,409</div>
-              </a>
-            </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="
-                      background-image: url(' /products-bubuk-maketti.jpg');
-                    "
-                  ></div>
+
+                <div class="products-text"><%= daftarProduct[i].name %></div>
+                <div class="products-price">
+                  Rp. <%= daftarProduct[i].price %>
                 </div>
-                <div class="products-text">Bubuk Maketti</div>
-                <div class="products-price">$225</div>
               </a>
             </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="
-                      background-image: url(' /products-tatakan-gelas.jpg');
-                    "
-                  ></div>
-                </div>
-                <div class="products-text">Tatakan Gelas</div>
-                <div class="products-price">$45,184</div>
-              </a>
-            </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="background-image: url(' /products-mavic-kawe.jpg')"
-                  ></div>
-                </div>
-                <div class="products-text">Mavic Kawe</div>
-                <div class="products-price">$503</div>
-              </a>
-            </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="700"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="
-                      background-image: url(' /products-black-edition-nike.jpg');
-                    "
-                  ></div>
-                </div>
-                <div class="products-text">Black Edition Nike</div>
-                <div class="products-price">$70,482</div>
-              </a>
-            </div>
-            <div
-              class="col-6 col-md-4 col-lg-3"
-              data-aos="fade-up"
-              data-aos-delay="800"
-            >
-              <a class="component-products d-block" href="/details">
-                <div class="products-thumbnail">
-                  <div
-                    class="products-image"
-                    style="background-image: url(' /products-monkey-toys.jpg')"
-                  ></div>
-                </div>
-                <div class="products-text">Monkey Toys</div>
-                <div class="products-price">$783</div>
-              </a>
-            </div>
+            <% } %>
           </div>
         </div>
       </section>
